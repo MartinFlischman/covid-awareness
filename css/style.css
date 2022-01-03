@@ -20,11 +20,11 @@ body {
 	position: relative;
 	max-width: 100%;
 	display: grid;
-	grid-template-columns: repeat(auto-fill, minmax(30rem, 1fr));
+	grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
 	grid-template-rows: minmax(10rem, auto);
 	margin: 4rem;
 	grid-auto-flow: dense;
-	grid-gap: 1rem;
+	gap: 1rem;
 }
 
 .box {
@@ -32,11 +32,11 @@ body {
 	color: #929796;
 	padding: 2rem;
 	display: grid;
-	font-size: 3.5vw;
 	place-items: center;
+	font-size: clamp(3rem, 4vw, 4.5rem);
 	text-align: center;
 	color: #f8f8ff;
-	transition: 0.3s;
+	transition: 0.5s;
 	border-radius: 1rem;
 }
 
@@ -50,24 +50,4 @@ img {
 	height: auto;
 	position: relative;
 	margin-bottom: 1rem;
-}
-
-.box:nth-child(1) {
-	grid-column: span 2;
-	grid-row: span 1;
-}
-
-.box:nth-child(2) {
-	grid-column: span 1;
-	grid-row: span 2;
-}
-
-.box:nth-child(4) {
-	grid-column: span 1;
-	grid-row: span 2;
-}
-
-.box:nth-child(5) {
-	grid-column: span 3;
-	grid-row: span 1;
 }
